@@ -1,24 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasketViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasketViewController" customModule="Enuygun" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gs7-Ff-2Xb">
+                    <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGR-iz-3lN">
+                            <rect key="frame" x="167" y="11.999999999999998" width="59.333333333333343" height="20.333333333333329"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ISf-cX-HVR"/>
+                        <constraint firstItem="uGR-iz-3lN" firstAttribute="centerY" secondItem="gs7-Ff-2Xb" secondAttribute="centerY" id="MbE-S5-hrJ"/>
+                        <constraint firstItem="uGR-iz-3lN" firstAttribute="centerX" secondItem="gs7-Ff-2Xb" secondAttribute="centerX" id="hCd-Ru-7u7"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WSp-Pf-IYw">
+                    <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="8j8-uf-2JT"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="WSp-Pf-IYw" firstAttribute="leading" secondItem="8j8-uf-2JT" secondAttribute="leading" id="3zi-Yt-JDA"/>
+                <constraint firstItem="8j8-uf-2JT" firstAttribute="bottom" secondItem="WSp-Pf-IYw" secondAttribute="bottom" id="HJA-5w-GqP"/>
+                <constraint firstItem="gs7-Ff-2Xb" firstAttribute="top" secondItem="8j8-uf-2JT" secondAttribute="top" id="HzL-Fa-FZY"/>
+                <constraint firstItem="gs7-Ff-2Xb" firstAttribute="leading" secondItem="8j8-uf-2JT" secondAttribute="leading" id="SuV-NE-wIZ"/>
+                <constraint firstItem="WSp-Pf-IYw" firstAttribute="top" secondItem="gs7-Ff-2Xb" secondAttribute="bottom" id="fKY-7Z-j6t"/>
+                <constraint firstItem="8j8-uf-2JT" firstAttribute="trailing" secondItem="WSp-Pf-IYw" secondAttribute="trailing" id="gNT-IZ-I39"/>
+                <constraint firstItem="gs7-Ff-2Xb" firstAttribute="trailing" secondItem="8j8-uf-2JT" secondAttribute="trailing" id="uch-Pa-hku"/>
+            </constraints>
             <point key="canvasLocation" x="-569" y="2"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

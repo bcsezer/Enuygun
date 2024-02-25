@@ -14,6 +14,7 @@ protocol ProductDetailBusinessLogic {
 
 class ProductDetailInteractor: ProductDetailBusinessLogic {
     var presenter: ProductDetailPresentationLogic?
+    var product: Product?
     
     // MARK: Business Logic
 

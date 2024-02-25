@@ -15,22 +15,7 @@ protocol ProductDetailDisplayLogic: AnyObject {
 class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic {
     var interactor: ProductDetailBusinessLogic?
     var router: (NSObjectProtocol & ProductDetailRoutingLogic)?
-
-    // TODO: Move this function to ViewControllerFactory
-    
-    func makeProductDetail() -> UIViewController {
-        let viewController = ProductDetailViewController(nibName: "ProductDetailView", bundle: nil)
-        let interactor = ProductDetailInteractor()
-        let presenter = ProductDetailPresenter()
-        let router = ProductDetailRouter()
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        return viewController
-    }
-
+   
     // MARK: View lifecycle
 
     override func viewDidLoad() {

@@ -16,21 +16,6 @@ class FavoritesViewController: UIViewController, FavoritesDisplayLogic {
     var interactor: FavoritesBusinessLogic?
     var router: (NSObjectProtocol & FavoritesRoutingLogic)?
 
-    // TODO: Move this function to ViewControllerFactory
-    
-    func makeFavorites() -> UIViewController {
-        let viewController = FavoritesViewController(nibName: "FavoritesView", bundle: nil)
-        let interactor = FavoritesInteractor()
-        let presenter = FavoritesPresenter()
-        let router = FavoritesRouter()
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        return viewController
-    }
-
     // MARK: View lifecycle
 
     override func viewDidLoad() {

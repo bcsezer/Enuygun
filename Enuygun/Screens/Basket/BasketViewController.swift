@@ -16,21 +16,6 @@ class BasketViewController: UIViewController, BasketDisplayLogic {
     var interactor: BasketBusinessLogic?
     var router: (NSObjectProtocol & BasketRoutingLogic)?
 
-    // TODO: Move this function to ViewControllerFactory
-    
-    func makeBasket() -> UIViewController {
-        let viewController = BasketViewController(nibName: "BasketView", bundle: nil)
-        let interactor = BasketInteractor()
-        let presenter = BasketPresenter()
-        let router = BasketRouter()
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        return viewController
-    }
-
     // MARK: View lifecycle
 
     override func viewDidLoad() {

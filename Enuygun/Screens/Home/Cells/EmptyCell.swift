@@ -8,7 +8,8 @@
 import UIKit
 
 class EmptyCell: UITableViewCell {
-
+    static let identifier = "EmptyCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

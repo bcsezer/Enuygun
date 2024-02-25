@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeRoutingLogic {
-    func routeToSomeWhere()
+    func routeToDetail(product: Product)
 }
 
 class HomeRouter: NSObject, HomeRoutingLogic {
@@ -17,7 +17,7 @@ class HomeRouter: NSObject, HomeRoutingLogic {
 
     // MARK: Routing Logic
     
-    func routeToSomeWhere() {
+    func routeToDetail(product: Product) {
         
     }
 }

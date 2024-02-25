@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomePresentationLogic {
-    func present(response: Home.Something.Response)
+    func present(response: Home.GetInitial.Response)
 }
 
 class HomePresenter: HomePresentationLogic {
@@ -17,8 +17,36 @@ class HomePresenter: HomePresentationLogic {
 
     // MARK: Presentation Logic
     
-    func present(response: Home.Something.Response) {
-        let viewModel = Home.Something.ViewModel()
-        viewController?.display(viewModel: viewModel)
+    func present(response: Home.GetInitial.Response) {
+        var cells: [Home.Rows] = []
+        let total = response.product.total ?? 0
+        
+        if (response.product.products ?? []).isEmpty {
+            cells.append(.empty)
+        } else {
+            for product in response.product.products ?? [] {
+                cells.append(.products(
+                    product: Product(
+                        id: product.id,
+                        price: product.price,
+                        stock: product.stock,
+                        title: product.title,
+                        description: product.description,
+                        brand: product.brand,
+                        category: product.category,
+                        thumbnail: product.thumbnail,
+                        discountPercentage: product.discountPercentage,
+                        rating: product.rating,
+                        images: product.images
+                    )))
+            }
+        }
+        
+        viewController?.display(viewModel: Home.GetInitial.ViewModel(
+            hasAnyResults: total > 0,
+            totalCount: "Toplam \(total.description) adet",
+            rows: cells
+        )
+        )
     }
 }

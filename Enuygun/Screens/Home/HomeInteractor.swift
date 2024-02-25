@@ -9,16 +9,19 @@
 import UIKit
 
 protocol HomeBusinessLogic {
-    func handle(request: Home.Something.Request)
+    func handle(request: Home.GetInitial.Request)
 }
 
 class HomeInteractor: HomeBusinessLogic {
     var presenter: HomePresentationLogic?
-    
+    let manager = NetworkManager.shared
     // MARK: Business Logic
 
-    func handle(request: Home.Something.Request) {
-        let response = Home.Something.Response()
-        presenter?.present(response: response)
+    func handle(request: Home.GetInitial.Request) {
+        manager.getList { result in
+            self.presenter?.present(response: Home.GetInitial.Response(product: result))
+        } failure: { error in
+            print(error)
+        }
     }
 }

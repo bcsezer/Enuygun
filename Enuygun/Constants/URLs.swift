@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct URLs {
+    static let baseUrl = "https://dummyjson.com/products"
+    static let searchUrl = "https://dummyjson.com/products/search?q="
+}
