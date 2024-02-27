@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension Array {
+    var removingDuplicates: [Element] {
+        NSOrderedSet(array: self).array.compactMap({ $0 as? Element })
+    }
+}

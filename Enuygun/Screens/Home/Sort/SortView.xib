@@ -1,24 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SortViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SortViewController" customModule="Enuygun" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="1Lf-QR-LFD" id="acF-Oe-9CG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Lf-QR-LFD">
+                    <rect key="frame" x="0.0" y="512" width="393" height="340"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uks-RA-8Sf">
+                            <rect key="frame" x="166.33333333333334" y="23" width="60.666666666666657" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="920-my-CPW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aWs-Op-UoO">
+                            <rect key="frame" x="20" y="266" width="353" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPn-tK-1kf">
+                                    <rect key="frame" x="0.0" y="0.0" width="174" height="44"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Temizle"/>
+                                    <connections>
+                                        <action selector="tapClean:" destination="-1" eventType="touchUpInside" id="z4k-ZU-IdM"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNq-TK-hic">
+                                    <rect key="frame" x="179" y="0.0" width="174" height="44"/>
+                                    <color key="backgroundColor" red="0.72941176470000002" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Kapat"/>
+                                    <connections>
+                                        <action selector="tapClose:" destination="-1" eventType="touchUpInside" id="jqB-PQ-c3W"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="Ll7-H5-tST"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBV-Yu-Jit">
+                            <rect key="frame" x="153.66666666666666" y="10" width="86" height="3"/>
+                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="3" id="9oI-Ib-Zt4"/>
+                                <constraint firstAttribute="width" constant="86" id="Xhy-xD-yvh"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekx-iN-cWk">
+                            <rect key="frame" x="20" y="68" width="353" height="40"/>
+                            <color key="backgroundColor" red="0.72941176470000002" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="6LR-uU-geg"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Fiyata Göre (Azalan)"/>
+                            <connections>
+                                <action selector="tapDecrease:" destination="-1" eventType="touchUpInside" id="aCw-Co-cRJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8X1-w5-8cq">
+                            <rect key="frame" x="20" y="124" width="353" height="40"/>
+                            <color key="backgroundColor" red="0.72941176470000002" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="ebP-pn-8qt"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Fiyata Göre (Artan)"/>
+                            <connections>
+                                <action selector="tapIncrease:" destination="-1" eventType="touchUpInside" id="yiQ-Za-kdM"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nU-mZ-IGF">
+                            <rect key="frame" x="20" y="180" width="353" height="40"/>
+                            <color key="backgroundColor" red="0.72941176470000002" green="0.72549019609999998" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Ilh-Qz-tf0"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Alfabetik sırala"/>
+                            <connections>
+                                <action selector="tapAlphabetical:" destination="-1" eventType="touchUpInside" id="7VK-Ky-4mk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ekx-iN-cWk" firstAttribute="leading" secondItem="1Lf-QR-LFD" secondAttribute="leading" constant="20" id="0Z0-Mk-rv8"/>
+                        <constraint firstAttribute="trailing" secondItem="3nU-mZ-IGF" secondAttribute="trailing" constant="20" id="FIQ-d5-mtg"/>
+                        <constraint firstItem="uks-RA-8Sf" firstAttribute="top" secondItem="mBV-Yu-Jit" secondAttribute="bottom" constant="10" id="IqR-eV-Ffu"/>
+                        <constraint firstAttribute="trailing" secondItem="8X1-w5-8cq" secondAttribute="trailing" constant="20" id="IrQ-DX-WbX"/>
+                        <constraint firstAttribute="trailing" secondItem="aWs-Op-UoO" secondAttribute="trailing" constant="20" id="M1r-M7-SUF"/>
+                        <constraint firstItem="3nU-mZ-IGF" firstAttribute="top" secondItem="8X1-w5-8cq" secondAttribute="bottom" constant="16" id="Ogh-jz-QVc"/>
+                        <constraint firstItem="uks-RA-8Sf" firstAttribute="centerX" secondItem="1Lf-QR-LFD" secondAttribute="centerX" id="Owc-LN-MTQ"/>
+                        <constraint firstAttribute="bottom" secondItem="aWs-Op-UoO" secondAttribute="bottom" constant="30" id="Svd-GF-Aaj"/>
+                        <constraint firstItem="3nU-mZ-IGF" firstAttribute="leading" secondItem="1Lf-QR-LFD" secondAttribute="leading" constant="20" id="Twa-fY-sbC"/>
+                        <constraint firstAttribute="trailing" secondItem="ekx-iN-cWk" secondAttribute="trailing" constant="20" id="WtY-tr-0j8"/>
+                        <constraint firstItem="mBV-Yu-Jit" firstAttribute="top" secondItem="1Lf-QR-LFD" secondAttribute="top" constant="10" id="WzD-JM-d7t"/>
+                        <constraint firstItem="8X1-w5-8cq" firstAttribute="leading" secondItem="1Lf-QR-LFD" secondAttribute="leading" constant="20" id="Z1N-mR-vss"/>
+                        <constraint firstItem="aWs-Op-UoO" firstAttribute="top" secondItem="3nU-mZ-IGF" secondAttribute="bottom" constant="46" id="elH-o2-9et"/>
+                        <constraint firstItem="aWs-Op-UoO" firstAttribute="leading" secondItem="1Lf-QR-LFD" secondAttribute="leading" constant="20" id="hPZ-7a-wfG"/>
+                        <constraint firstItem="8X1-w5-8cq" firstAttribute="top" secondItem="ekx-iN-cWk" secondAttribute="bottom" constant="16" id="qEq-Hu-7cc"/>
+                        <constraint firstItem="mBV-Yu-Jit" firstAttribute="centerX" secondItem="1Lf-QR-LFD" secondAttribute="centerX" id="qdG-2I-Zst"/>
+                        <constraint firstItem="ekx-iN-cWk" firstAttribute="top" secondItem="uks-RA-8Sf" secondAttribute="bottom" constant="26" id="yyJ-7m-pQW"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="8j8-uf-2JT"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="-569" y="2"/>
+            <color key="backgroundColor" red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1Lf-QR-LFD" firstAttribute="trailing" secondItem="8j8-uf-2JT" secondAttribute="trailing" id="BCd-rO-etc"/>
+                <constraint firstAttribute="bottom" secondItem="1Lf-QR-LFD" secondAttribute="bottom" id="EwM-XD-P8Z"/>
+                <constraint firstItem="1Lf-QR-LFD" firstAttribute="leading" secondItem="8j8-uf-2JT" secondAttribute="leading" id="fSR-k2-JJu"/>
+            </constraints>
+            <point key="canvasLocation" x="-570.2290076335878" y="1.4084507042253522"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

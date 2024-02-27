@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct BasketEntity: Codable {
+    let id: Int
+    let name: String
+    var price: Int
+    let image: String
+    var count: Int
+}

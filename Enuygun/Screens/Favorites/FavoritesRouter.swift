@@ -9,7 +9,7 @@
 import UIKit
 
 protocol FavoritesRoutingLogic {
-    func routeToSomeWhere()
+    func routeToDetail(product: Product)
 }
 
 class FavoritesRouter: NSObject, FavoritesRoutingLogic {
@@ -17,7 +17,8 @@ class FavoritesRouter: NSObject, FavoritesRoutingLogic {
 
     // MARK: Routing Logic
     
-    func routeToSomeWhere() {
-        
+    func routeToDetail(product: Product) {
+        let detailVC = ViewControllerFactory.shared.makeProductDetail(product: product)
+        self.viewController?.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

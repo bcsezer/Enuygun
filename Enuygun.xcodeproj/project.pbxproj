@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A80B77772B8DDAFE002118BE /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B77712B8DDAFE002118BE /* SortViewController.swift */; };
+		A80B77792B8DDAFE002118BE /* SortView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80B77732B8DDAFE002118BE /* SortView.xib */; };
+		A80B777B2B8E0287002118BE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B777A2B8E0287002118BE /* UIView+Extensions.swift */; };
+		A80B777D2B8E049B002118BE /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B777C2B8E049B002118BE /* ModalPresentationController.swift */; };
+		A80B777F2B8E04B3002118BE /* ModalTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B777E2B8E04B3002118BE /* ModalTransitioningDelegate.swift */; };
+		A80B77812B8E04CD002118BE /* PushModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B77802B8E04CD002118BE /* PushModal.swift */; };
+		A80B77902B8E1F1D002118BE /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B778A2B8E1F1D002118BE /* FilterPresenter.swift */; };
+		A80B77922B8E1F1D002118BE /* FilterModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B778C2B8E1F1D002118BE /* FilterModels.swift */; };
+		A80B77932B8E1F1D002118BE /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B778D2B8E1F1D002118BE /* FilterViewController.swift */; };
+		A80B77942B8E1F1D002118BE /* FilterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B778E2B8E1F1D002118BE /* FilterInteractor.swift */; };
+		A80B77952B8E1F1D002118BE /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80B778F2B8E1F1D002118BE /* FilterView.xib */; };
+		A80B77982B8E22D2002118BE /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B77962B8E22D2002118BE /* FilterCell.swift */; };
+		A80B77992B8E22D2002118BE /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80B77972B8E22D2002118BE /* FilterCell.xib */; };
+		A80B779C2B8E3139002118BE /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B779B2B8E3139002118BE /* Array+Extensions.swift */; };
+		A80B779E2B8E355C002118BE /* TextField+Extensins.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80B779D2B8E355C002118BE /* TextField+Extensins.swift */; };
+		A831361E2B8BB31800A87CFF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A831361D2B8BB31800A87CFF /* Color.swift */; };
+		A83136202B8BB46700A87CFF /* Integer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A831361F2B8BB46700A87CFF /* Integer+Extensions.swift */; };
+		A83136242B8BBA1100A87CFF /* DetailBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83136222B8BBA1100A87CFF /* DetailBannerCell.swift */; };
+		A83136252B8BBA1100A87CFF /* DetailBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83136232B8BBA1100A87CFF /* DetailBannerCell.xib */; };
+		A83136282B8BCA8700A87CFF /* FavoritesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83136272B8BCA8700A87CFF /* FavoritesRepository.swift */; };
+		A831362A2B8BCBF100A87CFF /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83136292B8BCBF100A87CFF /* Keys.swift */; };
+		A831362C2B8C9E5B00A87CFF /* BasketRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A831362B2B8C9E5B00A87CFF /* BasketRepository.swift */; };
+		A831362E2B8CA04600A87CFF /* BasketEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A831362D2B8CA04600A87CFF /* BasketEntity.swift */; };
+		A83136312B8CA1FC00A87CFF /* BasketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A831362F2B8CA1FC00A87CFF /* BasketCell.swift */; };
+		A83136322B8CA1FC00A87CFF /* BasketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A83136302B8CA1FC00A87CFF /* BasketCell.xib */; };
+		A83136352B8CB74100A87CFF /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83136342B8CB74100A87CFF /* String+Extensions.swift */; };
 		A8DBCC622B8A1E0300EF083D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBCC612B8A1E0300EF083D /* AppDelegate.swift */; };
 		A8DBCC642B8A1E0300EF083D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DBCC632B8A1E0300EF083D /* SceneDelegate.swift */; };
 		A8DBCC6B2B8A1E0400EF083D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DBCC6A2B8A1E0400EF083D /* Assets.xcassets */; };
@@ -68,6 +94,32 @@
 /* Begin PBXFileReference section */
 		34CD2C94F94BEC9770A97928 /* Pods_Enuygun.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Enuygun.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A277D60C307748E0FA0A58D1 /* Pods-Enuygun.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Enuygun.debug.xcconfig"; path = "Target Support Files/Pods-Enuygun/Pods-Enuygun.debug.xcconfig"; sourceTree = "<group>"; };
+		A80B77712B8DDAFE002118BE /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
+		A80B77732B8DDAFE002118BE /* SortView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortView.xib; sourceTree = "<group>"; };
+		A80B777A2B8E0287002118BE /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		A80B777C2B8E049B002118BE /* ModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
+		A80B777E2B8E04B3002118BE /* ModalTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransitioningDelegate.swift; sourceTree = "<group>"; };
+		A80B77802B8E04CD002118BE /* PushModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushModal.swift; sourceTree = "<group>"; };
+		A80B778A2B8E1F1D002118BE /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
+		A80B778C2B8E1F1D002118BE /* FilterModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModels.swift; sourceTree = "<group>"; };
+		A80B778D2B8E1F1D002118BE /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		A80B778E2B8E1F1D002118BE /* FilterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterInteractor.swift; sourceTree = "<group>"; };
+		A80B778F2B8E1F1D002118BE /* FilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		A80B77962B8E22D2002118BE /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		A80B77972B8E22D2002118BE /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		A80B779B2B8E3139002118BE /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		A80B779D2B8E355C002118BE /* TextField+Extensins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extensins.swift"; sourceTree = "<group>"; };
+		A831361D2B8BB31800A87CFF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A831361F2B8BB46700A87CFF /* Integer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Integer+Extensions.swift"; sourceTree = "<group>"; };
+		A83136222B8BBA1100A87CFF /* DetailBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBannerCell.swift; sourceTree = "<group>"; };
+		A83136232B8BBA1100A87CFF /* DetailBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailBannerCell.xib; sourceTree = "<group>"; };
+		A83136272B8BCA8700A87CFF /* FavoritesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRepository.swift; sourceTree = "<group>"; };
+		A83136292B8BCBF100A87CFF /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		A831362B2B8C9E5B00A87CFF /* BasketRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketRepository.swift; sourceTree = "<group>"; };
+		A831362D2B8CA04600A87CFF /* BasketEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketEntity.swift; sourceTree = "<group>"; };
+		A831362F2B8CA1FC00A87CFF /* BasketCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketCell.swift; sourceTree = "<group>"; };
+		A83136302B8CA1FC00A87CFF /* BasketCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketCell.xib; sourceTree = "<group>"; };
+		A83136342B8CB74100A87CFF /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		A8DBCC5E2B8A1E0300EF083D /* Enuygun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enuygun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DBCC612B8A1E0300EF083D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DBCC632B8A1E0300EF083D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +192,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A80B775F2B8D29E4002118BE /* EmptyCell */ = {
+			isa = PBXGroup;
+			children = (
+				A8DBCCDB2B8B7C3600EF083D /* EmptyCell.swift */,
+				A8DBCCDC2B8B7C3600EF083D /* EmptyCell.xib */,
+			);
+			path = EmptyCell;
+			sourceTree = "<group>";
+		};
+		A80B77602B8DDAB3002118BE /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				A80B779A2B8E22D9002118BE /* Cells */,
+				A80B778A2B8E1F1D002118BE /* FilterPresenter.swift */,
+				A80B778C2B8E1F1D002118BE /* FilterModels.swift */,
+				A80B778D2B8E1F1D002118BE /* FilterViewController.swift */,
+				A80B778E2B8E1F1D002118BE /* FilterInteractor.swift */,
+				A80B778F2B8E1F1D002118BE /* FilterView.xib */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		A80B776D2B8DDAF1002118BE /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				A80B77712B8DDAFE002118BE /* SortViewController.swift */,
+				A80B77732B8DDAFE002118BE /* SortView.xib */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		A80B779A2B8E22D9002118BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A80B77962B8E22D2002118BE /* FilterCell.swift */,
+				A80B77972B8E22D2002118BE /* FilterCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A83136212B8BB90100A87CFF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A83136222B8BBA1100A87CFF /* DetailBannerCell.swift */,
+				A83136232B8BBA1100A87CFF /* DetailBannerCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A83136262B8BCA7800A87CFF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A83136272B8BCA8700A87CFF /* FavoritesRepository.swift */,
+				A831362B2B8C9E5B00A87CFF /* BasketRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		A83136332B8CA20000A87CFF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A831362F2B8CA1FC00A87CFF /* BasketCell.swift */,
+				A83136302B8CA1FC00A87CFF /* BasketCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A8DBCC552B8A1E0300EF083D = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +283,7 @@
 				A8DBCC6A2B8A1E0400EF083D /* Assets.xcassets */,
 				A8DBCC6C2B8A1E0400EF083D /* LaunchScreen.storyboard */,
 				A8DBCC6F2B8A1E0400EF083D /* Info.plist */,
+				A83136262B8BCA7800A87CFF /* Repositories */,
 				A8DBCCC42B8B6D1200EF083D /* Constants */,
 				A8DBCCC12B8B6CED00EF083D /* Enums */,
 				A8DBCCBA2B8B6C5C00EF083D /* CommonViews */,
@@ -220,6 +340,8 @@
 		A8DBCC7F2B8A1F9C00EF083D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A80B776D2B8DDAF1002118BE /* Sort */,
+				A80B77602B8DDAB3002118BE /* Filter */,
 				A8DBCCC92B8B6E4500EF083D /* Cells */,
 				A8DBCC802B8A1FA900EF083D /* HomePresenter.swift */,
 				A8DBCC812B8A1FA900EF083D /* HomeRouter.swift */,
@@ -248,6 +370,7 @@
 		A8DBCC992B8A200A00EF083D /* Basket */ = {
 			isa = PBXGroup;
 			children = (
+				A83136332B8CA20000A87CFF /* Cells */,
 				A8DBCC9A2B8A201B00EF083D /* BasketPresenter.swift */,
 				A8DBCC9B2B8A201B00EF083D /* BasketRouter.swift */,
 				A8DBCC9C2B8A201B00EF083D /* BasketModels.swift */,
@@ -261,6 +384,7 @@
 		A8DBCCA62B8A3ECC00EF083D /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
+				A83136212B8BB90100A87CFF /* Cells */,
 				A8DBCCCA2B8B6FFA00EF083D /* ProductDetailPresenter.swift */,
 				A8DBCCCB2B8B6FFA00EF083D /* ProductDetailRouter.swift */,
 				A8DBCCCC2B8B6FFA00EF083D /* ProductDetailModels.swift */,
@@ -279,6 +403,11 @@
 				A8DBCCE52B8B7DC000EF083D /* CollectionViewCell+Extensions.swift */,
 				A8DBCCE72B8B7DD600EF083D /* Colors+Extension.swift */,
 				A8DBCCE92B8B7DF600EF083D /* ImageView+Extension.swift */,
+				A831361F2B8BB46700A87CFF /* Integer+Extensions.swift */,
+				A83136342B8CB74100A87CFF /* String+Extensions.swift */,
+				A80B777A2B8E0287002118BE /* UIView+Extensions.swift */,
+				A80B779B2B8E3139002118BE /* Array+Extensions.swift */,
+				A80B779D2B8E355C002118BE /* TextField+Extensins.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,6 +417,7 @@
 			children = (
 				A8DBCCAB2B8A3F4200EF083D /* RemoteEntity.swift */,
 				A8DBCCED2B8B7FA000EF083D /* ProductEntity.swift */,
+				A831362D2B8CA04600A87CFF /* BasketEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -322,6 +452,7 @@
 		A8DBCCBA2B8B6C5C00EF083D /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				A80B775F2B8D29E4002118BE /* EmptyCell */,
 				A8DBCCBC2B8B6C7300EF083D /* ModalPresentation */,
 				A8DBCCBB2B8B6C6D00EF083D /* CustomPopup */,
 			);
@@ -340,6 +471,9 @@
 		A8DBCCBC2B8B6C7300EF083D /* ModalPresentation */ = {
 			isa = PBXGroup;
 			children = (
+				A80B777C2B8E049B002118BE /* ModalPresentationController.swift */,
+				A80B777E2B8E04B3002118BE /* ModalTransitioningDelegate.swift */,
+				A80B77802B8E04CD002118BE /* PushModal.swift */,
 			);
 			path = ModalPresentation;
 			sourceTree = "<group>";
@@ -357,6 +491,8 @@
 			children = (
 				A8DBCCC52B8B6D2300EF083D /* Images.swift */,
 				A8DBCCC72B8B6D6D00EF083D /* URLs.swift */,
+				A831361D2B8BB31800A87CFF /* Color.swift */,
+				A83136292B8BCBF100A87CFF /* Keys.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -364,8 +500,6 @@
 		A8DBCCC92B8B6E4500EF083D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A8DBCCDB2B8B7C3600EF083D /* EmptyCell.swift */,
-				A8DBCCDC2B8B7C3600EF083D /* EmptyCell.xib */,
 				A8DBCCDF2B8B7C4500EF083D /* ProductCell.swift */,
 				A8DBCCE02B8B7C4500EF083D /* ProductCell.xib */,
 			);
@@ -461,9 +595,14 @@
 				A8DBCCA52B8A201B00EF083D /* BasketView.xib in Resources */,
 				A8DBCCDE2B8B7C3600EF083D /* EmptyCell.xib in Resources */,
 				A8DBCC6E2B8A1E0400EF083D /* LaunchScreen.storyboard in Resources */,
+				A80B77792B8DDAFE002118BE /* SortView.xib in Resources */,
 				A8DBCC8B2B8A1FA900EF083D /* HomeView.xib in Resources */,
+				A80B77992B8E22D2002118BE /* FilterCell.xib in Resources */,
+				A80B77952B8E1F1D002118BE /* FilterView.xib in Resources */,
+				A83136322B8CA1FC00A87CFF /* BasketCell.xib in Resources */,
 				A8DBCC982B8A200300EF083D /* FavoritesView.xib in Resources */,
 				A8DBCC7E2B8A1F0000EF083D /* MainTabbarController.xib in Resources */,
+				A83136252B8BBA1100A87CFF /* DetailBannerCell.xib in Resources */,
 				A8DBCCE22B8B7C4500EF083D /* ProductCell.xib in Resources */,
 				A8DBCCDA2B8B77DB00EF083D /* FavoritesCell.xib in Resources */,
 				A8DBCCD52B8B6FFA00EF083D /* ProductDetailView.xib in Resources */,
@@ -523,18 +662,27 @@
 			files = (
 				A8DBCCE42B8B7DAE00EF083D /* TableViewCell+Extension.swift in Sources */,
 				A8DBCCDD2B8B7C3600EF083D /* EmptyCell.swift in Sources */,
+				A80B77942B8E1F1D002118BE /* FilterInteractor.swift in Sources */,
 				A8DBCCA32B8A201B00EF083D /* BasketViewController.swift in Sources */,
 				A8DBCC962B8A200300EF083D /* FavoritesViewController.swift in Sources */,
+				A80B777F2B8E04B3002118BE /* ModalTransitioningDelegate.swift in Sources */,
 				A8DBCCA22B8A201B00EF083D /* BasketModels.swift in Sources */,
+				A80B77982B8E22D2002118BE /* FilterCell.swift in Sources */,
 				A8DBCC932B8A200300EF083D /* FavoritesPresenter.swift in Sources */,
 				A8DBCCB12B8A3F9200EF083D /* NetworkProvider.swift in Sources */,
+				A83136282B8BCA8700A87CFF /* FavoritesRepository.swift in Sources */,
+				A80B779C2B8E3139002118BE /* Array+Extensions.swift in Sources */,
+				A80B77772B8DDAFE002118BE /* SortViewController.swift in Sources */,
 				A8DBCCD92B8B77DB00EF083D /* FavoritesCell.swift in Sources */,
+				A831361E2B8BB31800A87CFF /* Color.swift in Sources */,
 				A8DBCCE62B8B7DC000EF083D /* CollectionViewCell+Extensions.swift in Sources */,
 				A8DBCCAC2B8A3F4200EF083D /* RemoteEntity.swift in Sources */,
 				A8DBCCD02B8B6FFA00EF083D /* ProductDetailPresenter.swift in Sources */,
+				A83136242B8BBA1100A87CFF /* DetailBannerCell.swift in Sources */,
 				A8DBCCB62B8A400000EF083D /* RemoteEncoders.swift in Sources */,
 				A8DBCC972B8A200300EF083D /* FavoritesInteractor.swift in Sources */,
 				A8DBCCE82B8B7DD600EF083D /* Colors+Extension.swift in Sources */,
+				A80B779E2B8E355C002118BE /* TextField+Extensins.swift in Sources */,
 				A8DBCCD12B8B6FFA00EF083D /* ProductDetailRouter.swift in Sources */,
 				A8DBCCBF2B8B6C9C00EF083D /* CustomPopupView.swift in Sources */,
 				A8DBCC772B8A1E3900EF083D /* ViewControllerFactory.swift in Sources */,
@@ -542,9 +690,16 @@
 				A8DBCCE12B8B7C4500EF083D /* ProductCell.swift in Sources */,
 				A8DBCC872B8A1FA900EF083D /* HomeRouter.swift in Sources */,
 				A8DBCCAF2B8A3F8100EF083D /* EndpointType.swift in Sources */,
+				A80B77812B8E04CD002118BE /* PushModal.swift in Sources */,
 				A8DBCCA92B8A3F0E00EF083D /* UserDefaults4Extensions.swift in Sources */,
+				A831362C2B8C9E5B00A87CFF /* BasketRepository.swift in Sources */,
+				A831362A2B8BCBF100A87CFF /* Keys.swift in Sources */,
+				A80B77902B8E1F1D002118BE /* FilterPresenter.swift in Sources */,
+				A83136352B8CB74100A87CFF /* String+Extensions.swift in Sources */,
 				A8DBCCA42B8A201B00EF083D /* BasketInteractor.swift in Sources */,
+				A83136202B8BB46700A87CFF /* Integer+Extensions.swift in Sources */,
 				A8DBCC952B8A200300EF083D /* FavoritesModels.swift in Sources */,
+				A80B777D2B8E049B002118BE /* ModalPresentationController.swift in Sources */,
 				A8DBCC622B8A1E0300EF083D /* AppDelegate.swift in Sources */,
 				A8DBCCB82B8A401C00EF083D /* URLQueryEncoder.swift in Sources */,
 				A8DBCC892B8A1FA900EF083D /* HomeViewController.swift in Sources */,
@@ -553,16 +708,21 @@
 				A8DBCCD22B8B6FFA00EF083D /* ProductDetailModels.swift in Sources */,
 				A8DBCC7C2B8A1ECF00EF083D /* MainTabbarController.swift in Sources */,
 				A8DBCCC32B8B6CF800EF083D /* PopupType.swift in Sources */,
+				A80B777B2B8E0287002118BE /* UIView+Extensions.swift in Sources */,
 				A8DBCC862B8A1FA900EF083D /* HomePresenter.swift in Sources */,
 				A8DBCC8A2B8A1FA900EF083D /* HomeInteractor.swift in Sources */,
 				A8DBCCD32B8B6FFA00EF083D /* ProductDetailViewController.swift in Sources */,
+				A831362E2B8CA04600A87CFF /* BasketEntity.swift in Sources */,
+				A80B77922B8E1F1D002118BE /* FilterModels.swift in Sources */,
 				A8DBCC642B8A1E0300EF083D /* SceneDelegate.swift in Sources */,
 				A8DBCCC82B8B6D6D00EF083D /* URLs.swift in Sources */,
 				A8DBCC942B8A200300EF083D /* FavoritesRouter.swift in Sources */,
+				A80B77932B8E1F1D002118BE /* FilterViewController.swift in Sources */,
 				A8DBCC882B8A1FA900EF083D /* HomeModels.swift in Sources */,
 				A8DBCCB32B8A3FA800EF083D /* RemoteEndpoint.swift in Sources */,
 				A8DBCCA02B8A201B00EF083D /* BasketPresenter.swift in Sources */,
 				A8DBCCEA2B8B7DF600EF083D /* ImageView+Extension.swift in Sources */,
+				A83136312B8CA1FC00A87CFF /* BasketCell.swift in Sources */,
 				A8DBCCEC2B8B7E6700EF083D /* NetworkManager.swift in Sources */,
 				A8DBCCD42B8B6FFA00EF083D /* ProductDetailInteractor.swift in Sources */,
 			);

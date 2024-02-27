@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct Keys {
+    static let key = "AddToFavorites"
+    static let addBasket = "AddToBasket"
+}

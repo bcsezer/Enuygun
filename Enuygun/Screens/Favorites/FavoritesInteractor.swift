@@ -9,7 +9,8 @@
 import UIKit
 
 protocol FavoritesBusinessLogic {
-    func handle(request: Favorites.Something.Request)
+    func handle(request: Favorites.GetData.Request)
+    func handle(request: Favorites.AddToBasket.Request)
 }
 
 class FavoritesInteractor: FavoritesBusinessLogic {
@@ -17,8 +18,17 @@ class FavoritesInteractor: FavoritesBusinessLogic {
     
     // MARK: Business Logic
 
-    func handle(request: Favorites.Something.Request) {
-        let response = Favorites.Something.Response()
+    func handle(request: Favorites.GetData.Request) {
+        let response = Favorites.GetData.Response(products: FavoritesRepository.shared.getProduct() ?? [])
         presenter?.present(response: response)
+    }
+    
+    func handle(request: Favorites.AddToBasket.Request) {
+        if BasketRepository.shared.checkProductIsInBasket(request.product) {
+            presenter?.present(response: Favorites.Error.Response())
+        } else {
+            BasketRepository.shared.addProduct(request.product)
+            presenter?.present(response: Favorites.AddToBasket.Response())
+        }
     }
 }

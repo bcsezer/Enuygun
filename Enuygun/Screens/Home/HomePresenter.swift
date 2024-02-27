@@ -10,6 +10,7 @@ import UIKit
 
 protocol HomePresentationLogic {
     func present(response: Home.GetInitial.Response)
+    func present(response: Home.TapFilter.Response)
 }
 
 class HomePresenter: HomePresentationLogic {
@@ -19,12 +20,12 @@ class HomePresenter: HomePresentationLogic {
     
     func present(response: Home.GetInitial.Response) {
         var cells: [Home.Rows] = []
-        let total = response.product.total ?? 0
+        let total = response.totalCount
         
-        if (response.product.products ?? []).isEmpty {
+        if response.product.isEmpty {
             cells.append(.empty)
         } else {
-            for product in response.product.products ?? [] {
+            for product in response.product {
                 cells.append(.products(
                     product: Product(
                         id: product.id,
@@ -48,5 +49,9 @@ class HomePresenter: HomePresentationLogic {
             rows: cells
         )
         )
+    }
+    
+    func present(response: Home.TapFilter.Response) {
+        viewController?.display(viewModel: Home.TapFilter.ViewModel(product: response.product))
     }
 }

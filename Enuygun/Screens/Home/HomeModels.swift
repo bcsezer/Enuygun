@@ -15,7 +15,8 @@ enum Home {
         struct Request {
         }
         struct Response {
-            let product: ProductEntity
+            let totalCount: Int
+            let product: [Product]
         }
         struct ViewModel {
             let hasAnyResults: Bool
@@ -33,6 +34,42 @@ enum Home {
         }
         struct ViewModel {
             let rows: [Rows]
+        }
+    }
+    
+    enum TapSort {
+        struct Request {
+            let sortType: SortType
+        }
+        struct Response {
+            let product: ProductEntity
+        }
+        struct ViewModel {
+            let rows: [Rows]
+        }
+    }
+    
+    enum SelectFilter {
+        struct Request {
+            let name: String
+            let filterType: Filter.FilterType
+        }
+    }
+    
+    enum TapFilter {
+        struct Request {
+        }
+        struct Response {
+            let product: [Product]
+        }
+        struct ViewModel {
+            let product: [Product]
+        }
+    }
+    
+    enum TapSearch {
+        struct Request {
+            let searchText: String
         }
     }
     

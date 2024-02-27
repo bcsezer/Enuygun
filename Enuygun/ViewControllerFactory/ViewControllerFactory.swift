@@ -68,4 +68,22 @@ struct ViewControllerFactory {
         router.viewController = viewController
         return viewController
     }
+    
+    func makeSort(previousVC: UIViewController) -> UIViewController {
+        let viewController = SortViewController(nibName: "SortView", bundle: nil)
+        viewController.delegate = previousVC as? ProductsSortDelegate
+        return viewController
+    }
+    
+    func makeFilter(product: [Product], preVC: UIViewController) -> UIViewController {
+        let viewController = FilterViewController(nibName: "FilterView", bundle: nil)
+        let interactor = FilterInteractor()
+        let presenter = FilterPresenter()
+        viewController.interactor = interactor
+        viewController.delegate = preVC as? FilterViewDelegate
+        interactor.product = product
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        return viewController
+    }
 }

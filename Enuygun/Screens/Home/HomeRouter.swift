@@ -18,6 +18,7 @@ class HomeRouter: NSObject, HomeRoutingLogic {
     // MARK: Routing Logic
     
     func routeToDetail(product: Product) {
-        
+        let detailVC = ViewControllerFactory.shared.makeProductDetail(product: product)
+        self.viewController?.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

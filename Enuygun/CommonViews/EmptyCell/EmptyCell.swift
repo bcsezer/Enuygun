@@ -10,15 +10,9 @@ import UIKit
 class EmptyCell: UITableViewCell {
     static let identifier = "EmptyCell"
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet private weak var titleLabel: UILabel!
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func willDisplay(text: String) {
+        self.titleLabel.text = text
     }
-    
 }

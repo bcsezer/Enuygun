@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasketViewController" customModule="Enuygun" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="WSp-Pf-IYw" id="JEB-zO-byx"/>
+                <outlet property="totalPrice" destination="nlo-ms-D68" id="v9D-cS-w6Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -36,10 +38,49 @@
                         <constraint firstItem="uGR-iz-3lN" firstAttribute="centerX" secondItem="gs7-Ff-2Xb" secondAttribute="centerX" id="hCd-Ru-7u7"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WSp-Pf-IYw">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WSp-Pf-IYw">
                     <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMG-FE-L6O">
+                    <rect key="frame" x="0.0" y="718" width="393" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Price: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5K-iX-1lt">
+                            <rect key="frame" x="10" y="8" width="96.333333333333329" height="19"/>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlo-ms-D68">
+                            <rect key="frame" x="336" y="8" width="42" height="19"/>
+                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ru-tj-1Eb">
+                            <rect key="frame" x="15" y="42" width="363" height="50"/>
+                            <color key="backgroundColor" red="0.72941176470588232" green="0.72549019607843135" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="JAM-Vh-DGl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="CHECKOUT"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="H5K-iX-1lt" firstAttribute="top" secondItem="eMG-FE-L6O" secondAttribute="top" constant="8" id="2Dt-Vl-yav"/>
+                        <constraint firstAttribute="bottom" secondItem="7ru-tj-1Eb" secondAttribute="bottom" constant="8" id="4yz-d4-kIo"/>
+                        <constraint firstItem="7ru-tj-1Eb" firstAttribute="leading" secondItem="eMG-FE-L6O" secondAttribute="leading" constant="15" id="Oyy-5u-alZ"/>
+                        <constraint firstItem="H5K-iX-1lt" firstAttribute="leading" secondItem="eMG-FE-L6O" secondAttribute="leading" constant="10" id="bM4-xG-kd3"/>
+                        <constraint firstAttribute="trailing" secondItem="nlo-ms-D68" secondAttribute="trailing" constant="15" id="h3L-7z-hIB"/>
+                        <constraint firstAttribute="trailing" secondItem="7ru-tj-1Eb" secondAttribute="trailing" constant="15" id="kyd-sZ-QAF"/>
+                        <constraint firstItem="nlo-ms-D68" firstAttribute="top" secondItem="eMG-FE-L6O" secondAttribute="top" constant="8" id="mwc-mO-wet"/>
+                        <constraint firstAttribute="height" constant="100" id="wed-ye-6Zv"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="8j8-uf-2JT"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,6 +88,9 @@
                 <constraint firstItem="WSp-Pf-IYw" firstAttribute="leading" secondItem="8j8-uf-2JT" secondAttribute="leading" id="3zi-Yt-JDA"/>
                 <constraint firstItem="8j8-uf-2JT" firstAttribute="bottom" secondItem="WSp-Pf-IYw" secondAttribute="bottom" id="HJA-5w-GqP"/>
                 <constraint firstItem="gs7-Ff-2Xb" firstAttribute="top" secondItem="8j8-uf-2JT" secondAttribute="top" id="HzL-Fa-FZY"/>
+                <constraint firstItem="eMG-FE-L6O" firstAttribute="leading" secondItem="8j8-uf-2JT" secondAttribute="leading" id="IAP-ur-D73"/>
+                <constraint firstItem="8j8-uf-2JT" firstAttribute="trailing" secondItem="eMG-FE-L6O" secondAttribute="trailing" id="IGn-8F-kCw"/>
+                <constraint firstItem="8j8-uf-2JT" firstAttribute="bottom" secondItem="eMG-FE-L6O" secondAttribute="bottom" id="P8S-fo-b6C"/>
                 <constraint firstItem="gs7-Ff-2Xb" firstAttribute="leading" secondItem="8j8-uf-2JT" secondAttribute="leading" id="SuV-NE-wIZ"/>
                 <constraint firstItem="WSp-Pf-IYw" firstAttribute="top" secondItem="gs7-Ff-2Xb" secondAttribute="bottom" id="fKY-7Z-j6t"/>
                 <constraint firstItem="8j8-uf-2JT" firstAttribute="trailing" secondItem="WSp-Pf-IYw" secondAttribute="trailing" id="gNT-IZ-I39"/>

@@ -8,40 +8,55 @@
 
 import UIKit
 
-protocol SortDisplayLogic: AnyObject {
-    func display(viewModel: Sort.Something.ViewModel)
+enum SortType {
+    case decrease
+    case increase
+    case alphabetical
+    case clean
 }
 
-class SortViewController: UIViewController, SortDisplayLogic {
-    var interactor: SortBusinessLogic?
-    var router: (NSObjectProtocol & SortRoutingLogic)?
+protocol ProductsSortDelegate: AnyObject {
+    func didPressSort(type: SortType)
+}
 
-    // TODO: Move this function to ViewControllerFactory
+class SortViewController: UIViewController {
+    @IBOutlet weak var containerView: UIView!
+    weak var delegate: ProductsSortDelegate?
     
-    func makeSort() -> UIViewController {
-        let viewController = SortViewController(nibName: "SortView", bundle: nil)
-        let interactor = SortInteractor()
-        let presenter = SortPresenter()
-        let router = SortRouter()
-        viewController.interactor = interactor
-        viewController.router = router
-        interactor.presenter = presenter
-        presenter.viewController = viewController
-        router.viewController = viewController
-        return viewController
-    }
-
-    // MARK: View lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        let request = Sort.Something.Request()
-        interactor?.handle(request: request)
+       apperances()
     }
-
-    // MARK: Requests
-
-    func display(viewModel: Sort.Something.ViewModel) {
     
+    private func apperances() {
+        containerView.roundCorners(corners: [.topLeft, .topRight], radius: 10.0)
+    }
+    
+    @IBAction func tapDecrease(_ sender: Any) {
+        self.dismiss(animated: true, completion: {
+            self.delegate?.didPressSort(type: .decrease)
+        })
+    }
+    
+    @IBAction func tapIncrease(_ sender: Any) {
+        self.dismiss(animated: true, completion: {
+            self.delegate?.didPressSort(type: .increase)
+        })
+    }
+    
+    @IBAction func tapAlphabetical(_ sender: Any) {
+        self.dismiss(animated: true, completion: {
+            self.delegate?.didPressSort(type: .alphabetical)
+        })
+    }
+    
+    @IBAction func tapClean(_ sender: Any) {
+        self.dismiss(animated: true, completion: {
+            self.delegate?.didPressSort(type: .clean)
+        })
+    }
+    
+    @IBAction func tapClose(_ sender: Any) {
+        self.dismiss(animated: true)
     }
 }

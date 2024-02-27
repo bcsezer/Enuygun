@@ -9,7 +9,9 @@
 import UIKit
 
 protocol ProductDetailBusinessLogic {
-    func handle(request: ProductDetail.Something.Request)
+    func handle(request: ProductDetail.GetData.Request)
+    func handle(request: ProductDetail.TapFavorite.Request)
+    func handle(request: ProductDetail.AddToBasket.Request)
 }
 
 class ProductDetailInteractor: ProductDetailBusinessLogic {
@@ -17,9 +19,35 @@ class ProductDetailInteractor: ProductDetailBusinessLogic {
     var product: Product?
     
     // MARK: Business Logic
-
-    func handle(request: ProductDetail.Something.Request) {
-        let response = ProductDetail.Something.Response()
-        presenter?.present(response: response)
+    
+    func handle(request: ProductDetail.GetData.Request) {
+        guard let product = self.product else { return }
+        presenter?.present(response: ProductDetail.GetData.Response(product: product, hasFav: FavoritesRepository.shared.checkProductIsInFavorites(product)))
+    }
+    
+    func handle(request: ProductDetail.TapFavorite.Request) {
+        guard let product = self.product else { return }
+        let hasInFavs = FavoritesRepository.shared.checkProductIsInFavorites(product)
+        
+        if !hasInFavs {
+            FavoritesRepository.shared.addProduct(product, completion: { result in
+                if result {
+                    self.presenter?.present(response: ProductDetail.TapFavorite.Response(hasFav: false))
+                }
+            })
+        } else {
+            presenter?.present(response: ProductDetail.TapFavorite.Response(hasFav: true))
+        }
+    }
+    
+    func handle(request: ProductDetail.AddToBasket.Request) {
+        guard let product = self.product else { return }
+        
+        if BasketRepository.shared.checkProductIsInBasket(product) {
+            presenter?.present(response: ProductDetail.AddToBasket.Response(isItemAdded: true))
+        } else {
+            BasketRepository.shared.addProduct(product)
+            presenter?.present(response: ProductDetail.AddToBasket.Response(isItemAdded: false))
+        }
     }
 }

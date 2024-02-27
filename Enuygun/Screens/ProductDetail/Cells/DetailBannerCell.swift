@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailBannerCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+   static let identifier = "DetailBannerCell"
+    
+    @IBOutlet private weak var bannerImage: UIImageView!
+    
+    func willdisplay(image: String) {
+        bannerImage.setImage(imgUrl: image)
     }
-
 }

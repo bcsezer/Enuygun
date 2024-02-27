@@ -29,7 +29,7 @@ class MainTabBarController: UITabBarController {
         
         // MARK: 2.Basket
         let basketImage = UIImage(systemName: "basket.fill")
-        let basket = ViewControllerFactory.shared.makeFavorites()
+        let basket = ViewControllerFactory.shared.makeBasket()
         let tabThreeBarItem = UITabBarItem(title: "Basket", image: basketImage, selectedImage: basketImage)
         basket.tabBarItem = tabThreeBarItem
         

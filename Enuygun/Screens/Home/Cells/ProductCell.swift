@@ -16,16 +16,22 @@ class ProductCell: UITableViewCell {
     @IBOutlet private weak var productDesc: UILabel!
     @IBOutlet private weak var productTitle: UILabel!
     @IBOutlet private weak var productImage: UIImageView!
+    @IBOutlet private weak var containerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        apperence()
     }
 
     func willDisplay(product: Product) {
         self.productDesc.text = product.description
-        self.productPrice.text = product.price?.description
+        self.productPrice.text = (product.price?.string() ?? "").appending("₺")
         self.productTitle.text = product.title
         self.productImage.setImage(imgUrl: product.thumbnail ?? "")
+    }
+    
+    private func apperence() {
+        self.containerView.layer.masksToBounds = true
+        self.containerView.layer.cornerRadius = 10
     }
 }

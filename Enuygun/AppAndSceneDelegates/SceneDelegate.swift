@@ -19,9 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, UIGestureRecognizerDele
         let navigationController = UINavigationController(
             rootViewController: ViewControllerFactory.shared.makeMainTabBar()
         )
-        navigationController.isNavigationBarHidden = true
         navigationController.interactivePopGestureRecognizer?.delegate = self
         navigationController.interactivePopGestureRecognizer?.isEnabled = true
+        navigationController.navigationBar.isHidden = true
         window.rootViewController = navigationController
         
         self.window = window

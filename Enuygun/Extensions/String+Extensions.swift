@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+extension String {
+    func stringToFloat() -> CGFloat? {
+        guard let doubleValue = Double(self) else {
+            return nil
+        }
+        return CGFloat(doubleValue)
+    }
+}

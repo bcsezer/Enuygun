@@ -9,7 +9,8 @@
 import UIKit
 
 protocol FilterPresentationLogic {
-    func present(response: Filter.Something.Response)
+    func present(response: Filter.GetData.Response)
+    func present(response: Filter.TapCell.Response)
 }
 
 class FilterPresenter: FilterPresentationLogic {
@@ -17,8 +18,17 @@ class FilterPresenter: FilterPresentationLogic {
 
     // MARK: Presentation Logic
     
-    func present(response: Filter.Something.Response) {
-        let viewModel = Filter.Something.ViewModel()
-        viewController?.display(viewModel: viewModel)
+    func present(response: Filter.GetData.Response) {
+        var cells: [Filter.Rows] = []
+  
+        for item in response.data.removingDuplicates {
+            cells.append(.filter(title: item, type: response.type))
+        }
+        
+        viewController?.display(viewModel: Filter.GetData.ViewModel(rows: cells))
+    }
+    
+    func present(response: Filter.TapCell.Response) {
+        viewController?.display(viewModel: Filter.TapCell.ViewModel(name: response.name, type: response.type))
     }
 }
